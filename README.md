@@ -16,6 +16,7 @@ This repository contains a python implementation of our paper [MS-Former](https:
   </p>
   <figcaption>Fig. 2 Comparison of the change detection performance measured by F1 of our proposed MS-Former using patch-level labels across different patch size settings on the BCDD dataset.</figcaption>
 </figure>
+
 Notably, as the patch size increases, the patch-level labels align more closely with image-level annotations, while decreasing patch size results in labels close to pixel-wise annotations. In this work, we observe that a slight reduction in patch size substantially enhances change detection performance. This observation suggests the potential of exploring patch-level annotations for remote sensing change detection.<br>
 
 ### 2. Overview
