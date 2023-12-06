@@ -2,7 +2,7 @@
 
 This repository contains a python implementation of our paper [MS-Former](https://arxiv.org/pdf/2311.09726.pdf).
 
-### . Usage
+### 1. Usage
 + Prepare the data:
     - Download datasets [LEVIR](https://justchenhao.github.io/LEVIR/), [BCDD-BGMix](https://github.com/tsingqguo/bgmix), [SYSU](https://github.com/liumency/SYSU-CD), and [GVLM](https://github.com/zxk688/GVLM)
     - Crop LEVIR datasets into 256x256 patches. Generate patch-level annotations for LEVIR, BCDD-BGMix, SYSU, and GVLM datasets. 
