@@ -58,7 +58,7 @@ class FPN(nn.Module):
         #
         p5_ = F.interpolate(p5, p2.size()[2:], mode='bilinear', align_corners=True)
         p4_ = F.interpolate(p4, p2.size()[2:], mode='bilinear', align_corners=True)
-        p3_ = F.interpolate(p3, p2.size()[2:], mode='bilinear', align_corners=True)
+        p3_ = F.interpolate(p4, p2.size()[2:], mode='bilinear', align_corners=True)
         p_out = self.fusion_conv(torch.cat([p5_, p4_, p3_, p2], dim=1))
 
         return p_out
