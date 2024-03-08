@@ -24,7 +24,7 @@ class Dataset(torch.utils.data.Dataset):
         return len(self.pre_images)
     
     @staticmethod
-    def crop_image_into_patches(image, patch_size):
+    def label_to_patch_label(image, patch_size):
         image = np.ceil(image / 255)
         width, height = image.shape # height = width
         # Reshape the image into image_patches
@@ -44,7 +44,7 @@ class Dataset(torch.utils.data.Dataset):
         pre_image = cv2.imread(pre_image_name)
         post_image = cv2.imread(post_image_name)
         label = cv2.imread(label_name, 0)
-        patch_label = self.crop_image_into_patches(label, self.label_patch_size)
+        patch_label = self.label_to_patch_label(label, self.label_patch_size)
         img = np.concatenate((pre_image, post_image), axis=2)
         if self.transform:
             [img, patch_label, label] = self.transform(img, patch_label, label)
