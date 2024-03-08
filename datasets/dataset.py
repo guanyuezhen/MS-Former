@@ -27,11 +27,11 @@ class Dataset(torch.utils.data.Dataset):
     def crop_image_into_patches(image, patch_size):
         image = np.ceil(image / 255)
         width, height = image.shape # height = width
-        # Reshape the original matrix into submatrices
+        # Reshape the image into image_patches
         image_patches = image.reshape(width//patch_size, patch_size, -1, patch_size).swapaxes(1,2)
-        # Check if there is any 1 in each submatrix
+        # Check if there is any 1 in each patch
         change_exists = np.any(image_patches, axis=(2,3))
-        # Set elements to 1 in submatrices where 1 exists
+        # Set elements to 1 in each patch where 1 exists
         new_image = np.repeat(np.repeat(change_exists, patch_size, axis=0), patch_size, axis=1).astype(int)
         new_image = new_image * 255
 
