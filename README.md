@@ -7,16 +7,12 @@ This repository contains a Python implementation of our paper [MS-Former](https:
     - Download datasets [LEVIR](https://justchenhao.github.io/LEVIR/), [BCDD-BGMix](https://github.com/tsingqguo/bgmix), [SYSU](https://github.com/liumency/SYSU-CD), and [GVLM](https://github.com/zxk688/GVLM)
     - Crop LEVIR datasets into 256x256 patches. Generate patch-level annotations for LEVIR, BCDD-BGMix, SYSU, and GVLM datasets. 
     - Generate list file as `ls -R ./label/* > test.txt`
-    - The pre-processed datasets can be obtained from [BCDD-BGMix-PL](https://drive.google.com/file/d/1VrdQ-rxoGVM_8ecA-ObO0u-O8rSTpSHA/view?usp=sharing), [LEVIR-PL](https://drive.google.com/file/d/1VrdQ-rxoGVM_8ecA-ObO0u-O8rSTpSHA/view?usp=sharing), [SYSU-PL](https://drive.google.com/file/d/1VrdQ-rxoGVM_8ecA-ObO0u-O8rSTpSHA/view?usp=sharing), and [GLVM-PL](https://drive.google.com/file/d/1VrdQ-rxoGVM_8ecA-ObO0u-O8rSTpSHA/view?usp=sharing).
     - Prepare datasets into the following structure and set their path in `train.py` and `test.py`
     ```
     ├─Train
         ├─A        ...jpg/png
         ├─B        ...jpg/png
         ├─label    ...jpg/png
-        ├─label_256    ...jpg/png
-        ...
-        ├─label_32    ...jpg/png
         └─list     ...txt
     ├─Test
         ├─A
