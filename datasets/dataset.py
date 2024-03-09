@@ -44,7 +44,10 @@ class Dataset(torch.utils.data.Dataset):
         pre_image = cv2.imread(pre_image_name)
         post_image = cv2.imread(post_image_name)
         label = cv2.imread(label_name, 0)
-        patch_label = self.label_to_patch_label(label, self.label_patch_size)
+        if self.label_patch_size is None:
+            patch_label = label
+        else:
+            patch_label = self.label_to_patch_label(label, self.label_patch_size)
         img = np.concatenate((pre_image, post_image), axis=2)
         if self.transform:
             [img, patch_label, label] = self.transform(img, patch_label, label)
