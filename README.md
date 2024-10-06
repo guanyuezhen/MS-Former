@@ -1,4 +1,4 @@
-# <p align=center>`MS-Former: Memory-Supported Transformer for Weakly Supervised Change Detection with Patch-Level Annotations （under review）`</p>
+# <p align=center>`MS-Former: Memory-Supported Transformer for Weakly Supervised Change Detection with Patch-Level Annotations （IEEE TGRS 2024）`</p>
 
 This repository contains a Python implementation of our paper [MS-Former](https://arxiv.org/pdf/2311.09726.pdf).
 
